@@ -6,14 +6,15 @@ import org.junit.jupiter.api.Test;
 
 public class MainPageTest extends BasePageTest{
 
-//    @Test
-//    void moveToPage () {
-//        MainPage mainPage = new MainPage(driver);
-//        mainPage.clickButton();
-//
-//        //assert that url of the page is the same;
-//        //assert that title of the page is the same;
-//        Assertions.assertEquals("http://192.168.88.86/en-gb/catalog/QAstuff", driver.getCurrentUrl());
-//        Assertions.assertEquals("QA stuff", driver.getTitle());
-//    }
+    @Test
+    void moveToRegistrationPage () {
+        MainPage mainPage = new MainPage(driver);
+        mainPage.clickLinkToRegistration();
+        String expectedRegistrationFormHeader = "Naujos paskyros sukūrimas";
+        String actualRegistrationFormHeader = mainPage.printRegistrationFormHeader();
+        String expectedPageTitle = "Registracija";
+
+        Assertions.assertEquals(expectedPageTitle, driver.getTitle(), "Error: Page title is not the same.");
+        Assertions.assertEquals(expectedRegistrationFormHeader, actualRegistrationFormHeader, "Error: Registration form's header text is not the same.");
+    }
 }

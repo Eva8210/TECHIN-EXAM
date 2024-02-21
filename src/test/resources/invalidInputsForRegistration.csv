@@ -1,0 +1,6 @@
+nameCsv, passwordCsv,passwordConfirmCsv,messageErrCsv1
+na,123,123,Privaloma įvesti nuo 3 iki 32 simbolių
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,123,123,Privaloma įvesti nuo 3 iki 32 simbolių
+validName,12,12,Privaloma įvesti bent 3 simbolius
+validName1,123,1234,Įvesti slaptažodžiai nesutampa
+ValidName3,123,"",Įvesti slaptažodžiai nesutampa

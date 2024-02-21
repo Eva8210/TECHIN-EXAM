@@ -8,11 +8,15 @@ public class MainPage extends BasePage{
     public MainPage(WebDriver driver) {
         super(driver);
     }
-    // main page button to navigate to other pages
-//    @FindBy(xpath = "")
-//    WebElement buttonRegistration/Login/Products;
+    @FindBy(xpath = "//a[@href='/registruoti']")
+    WebElement linkToRegistration;
+    @FindBy(css = ".form-signin-heading")
+    WebElement registrationFormHeader;
 
-    //public void clickButtonQa(){
-    //        buttonQa.click();
-    //    }
+    public void clickLinkToRegistration(){
+        linkToRegistration.click();
+    }
+    public String printRegistrationFormHeader(){
+        return registrationFormHeader.getText();
+    }
 }

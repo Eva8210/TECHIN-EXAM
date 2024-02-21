@@ -13,7 +13,7 @@ public class BasePageTest {
     @BeforeEach
     void setup() {
         driver = new ChromeDriver();
-        driver.get("");
+        driver.get("http://localhost:8080/prisijungti");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }
